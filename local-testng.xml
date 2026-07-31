@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Local verification run. Set EXECUTION_ENV=local before running this suite;
+  the test class then ignores BrowserStack capabilities entirely and just
+  launches a local ChromeDriver. Use this to confirm the flow works before
+  spending BrowserStack session minutes on the 5-way parallel run.
+-->
+<suite name="ElPaisOpinionLocalSuite" parallel="none">
+    <test name="Local_Chrome">
+        <parameter name="platformType" value="desktop"/>
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="ecommerce.assignment.ElPaisOpinionTest"/>
+        </classes>
+    </test>
+</suite>
