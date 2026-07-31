@@ -1,0 +1,65 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  parallel="tests" + thread-count="5" runs each <test> block below on its own
+  thread, so all 5 browser/device combinations execute concurrently.
+  Each <test> maps to one BrowserStack session.
+-->
+<suite name="ElPaisOpinionSuite" parallel="tests" thread-count="5">
+
+    <test name="Windows11_Chrome_Latest">
+        <parameter name="platformType" value="desktop"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="osVersion" value="11"/>
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="deviceName" value=""/>
+        <classes>
+            <class name="ecommerce.assignment.ElPaisOpinionTest"/>
+        </classes>
+    </test>
+
+    <test name="Windows11_Firefox_Latest">
+        <parameter name="platformType" value="desktop"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="osVersion" value="11"/>
+        <parameter name="browserName" value="Firefox"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="deviceName" value=""/>
+        <classes>
+            <class name="ecommerce.assignment.ElPaisOpinionTest"/>
+        </classes>
+    </test>
+
+    <test name="MacSonoma_Safari_Latest">
+        <parameter name="platformType" value="desktop"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="osVersion" value="Sonoma"/>
+        <parameter name="browserName" value="Safari"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="deviceName" value=""/>
+        <classes>
+            <class name="ecommerce.assignment.ElPaisOpinionTest"/>
+        </classes>
+    </test>
+
+    <test name="SamsungGalaxyS23_Chrome">
+        <parameter name="platformType" value="mobile"/>
+        <parameter name="deviceName" value="Samsung Galaxy S23"/>
+        <parameter name="osVersion" value="13.0"/>
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="ecommerce.assignment.ElPaisOpinionTest"/>
+        </classes>
+    </test>
+
+    <test name="iPhone14_Safari">
+        <parameter name="platformType" value="mobile"/>
+        <parameter name="deviceName" value="iPhone 14"/>
+        <parameter name="osVersion" value="16"/>
+        <parameter name="browserName" value="safari"/>
+        <classes>
+            <class name="ecommerce.assignment.ElPaisOpinionTest"/>
+        </classes>
+    </test>
+
+</suite>
